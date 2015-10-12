@@ -83,7 +83,7 @@ def arg2text(arg):
     """ get text from comand line arg """
     import errno
     try:
-        if sys.version_info.major == 3:
+        if sys.version_info[0] == 3:
             with open(arg, encoding='utf-8') as data:
                 return data.read()
         else:
